@@ -203,7 +203,7 @@ class Downloader(
                         downloadChapter(download).subscribeOn(Schedulers.io())
                     }
                 },
-                5
+                10
             )
             .onBackpressureLatest()
             .observeOn(AndroidSchedulers.mainThread())
@@ -323,7 +323,7 @@ class Downloader(
             .flatMap { download.source.fetchAllImageUrlsFromPageList(it) }
             // Start downloading images, consider we can have downloaded images already
             // Concurrently do 5 pages at a time
-            .flatMap({ page -> getOrDownloadImage(page, download, tmpDir) }, 5)
+            .flatMap({ page -> getOrDownloadImage(page, download, tmpDir) }, 16)
             .onBackpressureLatest()
             // Do when page is downloaded.
             .doOnNext { notifier.onProgressChange(download) }
@@ -513,7 +513,7 @@ class Downloader(
     }
 }
 
-private const val CHAPTERS_PER_SOURCE_QUEUE_WARNING_THRESHOLD = 15
+private const val CHAPTERS_PER_SOURCE_QUEUE_WARNING_THRESHOLD = 1500
 
 // Arbitrary minimum required space to start a download: 50 MB
 private const val MIN_DISK_SPACE = 50 * 1024 * 1024
