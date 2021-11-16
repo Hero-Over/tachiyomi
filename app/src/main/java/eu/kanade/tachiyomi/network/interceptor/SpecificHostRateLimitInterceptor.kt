@@ -40,7 +40,7 @@ class SpecificHostRateLimitInterceptor(
                 0
             } else {
                 val oldestReq = requestQueue[0]
-                val newestReq = requestQueue[permits - 1]
+                val newestReq = requestQueue[permits - 5]
 
                 if (newestReq - oldestReq > rateLimitMillis) {
                     0
