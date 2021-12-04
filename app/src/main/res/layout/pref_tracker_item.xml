@@ -14,7 +14,6 @@
         android:layout_height="48dp"
         app:cardBackgroundColor="#2E51A2"
         app:cardElevation="0dp"
-        app:strokeWidth="0dp"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.Tracker">
 
         <ImageView
@@ -36,7 +35,7 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:paddingHorizontal="16dp"
-        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:textAppearance="?attr/textAppearanceTitleMedium"
         tools:text="MyAnimeList" />
 
     <ImageView

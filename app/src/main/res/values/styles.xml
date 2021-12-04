@@ -9,13 +9,8 @@
         <item name="android:colorControlHighlight">?attr/rippleColorToolbar</item>
     </style>
 
-    <style name="Widget.Tachiyomi.Toolbar.Button.Navigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
-        <item name="tint">?attr/colorOnToolbar</item>
-    </style>
-
-    <style name="Widget.Tachiyomi.ActionMode" parent="Widget.AppCompat.ActionMode">
+    <style name="Widget.Tachiyomi.ActionMode" parent="Widget.Material3.ActionMode">
         <item name="background">?attr/colorToolbar</item>
-        <item name="titleTextStyle">@style/TextAppearance.Tachiyomi.ActionMode.Title</item>
     </style>
 
     <style name="Theme.Tachiyomi.ActionMode.CloseButton" parent="Widget.AppCompat.ActionButton.CloseMode">
@@ -73,10 +68,6 @@
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
-    <style name="TextAppearance.Tachiyomi.ActionMode.Title" parent="TextAppearance.Material3.HeadlineSmall">
-        <item name="android:textColor">?attr/colorOnToolbar</item>
-    </style>
-
     <style name="TextAppearance.Tachiyomi.Preference.Secondary" parent="TextAppearance.Material3.BodySmall" />
 
     <style name="TextAppearance.Tachiyomi.SectionHeader" parent="TextAppearance.Material3.LabelLarge">
@@ -111,30 +102,22 @@
     </style>
 
 
-    <style name="Widget.Tachiyomi.Snackbar" parent="Widget.Material3.Snackbar">
-        <item name="android:background">@drawable/snackbar_background</item>
-        <item name="actionTextColorAlpha">1</item>
-    </style>
-    <style name="Widget.Tachiyomi.Snackbar.TextView" parent="Widget.Material3.Snackbar.TextView">
-        <item name="android:textColor">?attr/colorOnSurface</item>
-    </style>
-
-
     <style name="Widget.Tachiyomi.Chip.Action" parent="Widget.Material3.Chip.Suggestion">
         <item name="chipBackgroundColor">?attr/chipBackgroundColor</item>
         <item name="android:textColor">?attr/chipTextColor</item>
         <item name="rippleColor">?attr/colorControlHighlight</item>
+        <item name="chipStrokeWidth">0dp</item>
+
+        <!-- Smaller text/height -->
+        <item name="chipMinHeight">28dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodySmall</item>
+
+        <!-- Collapse horizontal margin -->
+        <item name="chipMinTouchTargetSize">28dp</item>
 
         <!-- Custom chip states -->
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
-
-        <!-- Smaller text/height -->
-        <item name="chipMinHeight">24dp</item>
-        <item name="android:textAppearance">?attr/textAppearanceCaption</item>
-
-        <!-- Collapse horizontal margin -->
-        <item name="chipMinTouchTargetSize">30dp</item>
     </style>
 
 
@@ -176,9 +159,6 @@
     <!--=================-->
     <style name="Widget.Tachiyomi.TabLayout" parent="Widget.Material3.TabLayout">
         <item name="tabGravity">center</item>
-        <item name="tabIndicator">@drawable/tab_indicator</item>
-        <item name="tabIndicatorFullWidth">false</item>
-        <item name="tabIndicatorHeight">3dp</item>
         <item name="tabInlineLabel">true</item>
         <item name="tabMinWidth">75dp</item>
         <item name="tabMode">scrollable</item>
@@ -267,7 +247,7 @@
     <!--Preferences-->
     <!--===========-->
     <style name="PreferenceThemeOverlay.Tachiyomi">
-        <item name="preferenceCategoryTitleTextAppearance">?attr/textAppearanceBody2</item>
+        <item name="preferenceCategoryTitleTextAppearance">?attr/textAppearanceBodyMedium</item>
         <item name="switchPreferenceCompatStyle">@style/PreferenceThemeOverlay.Tachiyomi.SwitchPreferenceCompat</item>
     </style>
 
