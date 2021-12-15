@@ -60,6 +60,7 @@
         <item name="android:enforceStatusBarContrast" tools:targetApi="Q">false</item>
         <item name="android:itemTextAppearance">@style/TextAppearance.Widget.Menu</item>
         <item name="android:alertDialogTheme">@style/ThemeOverlay.Tachiyomi.MaterialAlertDialog</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Tachiyomi.MaterialAlertDialog</item>
         <item name="textAppearanceButton">@style/TextAppearance.Widget.Button</item>
         <item name="android:buttonStyle">?attr/borderlessButtonStyle</item>
         <item name="android:backgroundDimAmount">0.32</item>
@@ -152,6 +153,7 @@
         <item name="colorOnSurfaceInverse">@color/midnightdusk_inverseOnSurface</item>
         <item name="colorSurfaceInverse">@color/midnightdusk_inverseSurface</item>
         <item name="colorPrimaryInverse">@color/midnightdusk_primaryInverse</item>
+        <item name="elevationOverlayColor">@color/midnightdusk_elevationOverlay</item>
     </style>
 
     <!--== Strawberry Daiquiri Theme ==-->
